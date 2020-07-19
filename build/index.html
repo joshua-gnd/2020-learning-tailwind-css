@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="build.css" />
+    <title>Document</title>
+  </head>
+  <body class="bg-red-200">
+    <h3>Thu 16 Apr, 2020 tailwind set up</h3>
+    <p class="font-sans text-center bg-blue-400 hover:bg-green-400">
+      Type a short paragraph. Set font family to sans. Align text to the page
+      center. Change background colour. On hover, change font to green
+    </p>
+    <h3>Mon 20 Apr, 2020</h3>
+    <div
+      class="border border-blue-400 rounded-md underline uppercase pt-6 pl-4 m-4 border-4"
+    >
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi eveniet
+        veniam deleniti, hic quos ipsa maiores modi atque unde nulla iusto
+        aliquid accusantium voluptate perferendis! Vero minima magnam nesciunt
+        a.
+      </p>
+    </div>
+    <h3>Wed 22 Apr, 2020</h3>
+    <input
+      class="border placeholder-gray-500 border-gray-500 text-xs p-2 h-6 block sm:inline m-2"
+      placeholder="first name"
+    />
+    <input
+      class="border placeholder-gray-500 border-gray-500 text-xs p-2 h-6 block sm:inline m-2"
+      placeholder="last name"
+    />
+    <input
+      class="border placeholder-gray-500 border-gray-500 text-xs p-2 h-6 block sm:inline m-2"
+      placeholder="username"
+    />
+
+    <!-- Fri 24 Apr, 2020 -->
+    <h3>Fri 24 Apr, 2020</h3>
+    <div class="mx-auto w-1/2 md:border-4 md:border-blue-400 md:rounded-lg">
+      <div class="relative md:p-1">
+        <img
+          src="info icon.jpg"
+          id="ibtn"
+          class="absolute bottom-0 right-0 z-10 w-4 h-4 md:hidden"
+        />
+
+        <img src="levera pond.jpg" class="rounded-lg" />
+      </div>
+
+      <p id="itext" class="hidden md:block p-4">
+        The above images displays an aerial view of Levera Pond located on the
+        North-Eastern tip of the Caribbean island of Grenada
+      </p>
+    </div>
+    <script>
+      document.getElementById("ibtn").addEventListener("click", () => {
+        let itext = document.getElementById("itext");
+
+        // if (itext.classList.contains("hidden")) {
+        //   itext.classList.remove("hidden");
+        //   itext.classList.add("block");
+        // } else {
+        //   itext.classList.remove("block");
+        //   itext.classList.add("hidden");
+        // }
+
+        if (itext.classList.contains("hidden")) {
+          itext.className += " block";
+          itext.classList.remove("hidden");
+        } else {
+          itext.className += " hidden";
+          itext.classList.remove("block");
+        }
+
+        // if (getComputedStyle(itext).display === "none") {
+        //   itext.style.display = "block";
+        // } else {
+        //   itext.style.display = "none";
+        // }
+      });
+    </script>
+
+    <h6>Custom Styling</h6>
+    <p class="customstyle">
+      go to style and under components type custom components: .customstyle {
+      @apply bg-blue-600 text-white; /* conventional CSS can be added */ border:
+      2px solid black; }
+      <br />
+      Download stylelint extension<br />
+      In terminal type "npm install stylelint -config-recommended --save-dev"<br />
+      Go to settings and remove check on "CSS: Validate"<br />
+      type "npm run build:css" in terminal (something like GULP can be used to
+      listen for changes instead of going to the terminal)
+    </p>
+    <h3>Mon 27 Apr, 2020</h3>
+    <p>
+      npx tailwindcss init --full; downloads tailwind.config.js which can be
+      manipulated<br />
+      npx tailwindcss init; downloads empty file making the <b>extension</b> of
+      <b>themes</b> easier.
+    </p>
+    <p class="bg-lime-200 border border-thick border-lime-300 scr3:bg-lime-400">
+      Demonstration of customisations
+    </p>
+    <h3>Wed 29 Apr, 2020</h3>
+    <p>
+      Transformations<br />
+      transform scale-0 (percent)<br />
+      transform rotate-45 (degrees)<br />
+      tranform translate-x-8 (px)<br />
+      transition-all<br />
+      duration-100<br />
+      ease-linear<br />
+      ease-in-out
+    </p>
+    <p
+      class="w-20 h-20 bg-blue-200 ml-20 transform hover:scale-150 opacity-50 hover:opacity-100 hover:text-xl duration-700 ease-in"
+    >
+      exercise
+    </p>
+    <h3>Thu 30 Apr, 2020 vue</h3>
+    <p>
+      installing vue: in terminal; npm install -g @vue/cli<br />
+      check for version: vue --version<br />
+      terminal: vue create vjs_class (vjs_class is the name)<br />
+      terminal: cd vjs_class<br />
+      terminal: npm run serve<br />
+      Output:<br />
+      App running at:<br />
+      - Local: http://localhost:8080/<br />
+      - Network: http://192.168.0.11:8080/<br />
+
+      Note that the development build is not optimized.<br />
+      To create a production build, run npm run build.<br />
+    </p>
+  </body>
+</html>

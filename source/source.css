@@ -1,0 +1,33 @@
+@tailwind base;
+
+h3 {
+  @apply text-white text-center text-4xl tracking-tighter font-bold;
+}
+
+h4 {
+  @apply text-white text-center text-3xl tracking-widest;
+}
+
+@tailwind components;
+
+.input-text {
+  @apply text-white block bg-transparent w-full pt-3 border-b-2 border-lime-100;
+}
+
+.input-text:focus {
+  @apply outline-none;
+}
+
+.button {
+  @apply text-white bg-lime-300 block mx-auto my-4 px-10 py-1 border-2 border-lime-100 rounded;
+}
+
+.button:hover {
+  @apply font-semibold bg-lime-200;
+}
+
+@tailwind utilities;
+
+/* .w-sm-scr {
+  width: 640px;
+ } */
